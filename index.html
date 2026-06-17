@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>المهندية</title>
+<style>
+body{margin:0;background:#0f0f0f;color:white;font-family:Tahoma}
+header{background:#161616;padding:18px;text-align:center;font-size:34px;font-weight:bold;position:sticky;top:0}
+.container{display:flex;flex-wrap:wrap}
+.main{flex:1;padding:12px;min-width:320px}
+.sidebar{width:340px;background:#181818;padding:10px;max-height:calc(100vh - 70px);overflow:auto}
+video{width:100%;background:black;border-radius:12px}
+.search{width:100%;padding:10px;border-radius:8px;border:none;margin-bottom:10px}
+.ch{width:100%;padding:10px;margin:4px 0;border:none;border-radius:8px;background:#262626;color:white;text-align:right;cursor:pointer}
+.ch:hover{background:#383838}
+.now{padding:10px;font-size:20px}
+</style>
+</head>
+<body>
+<header>المهندية</header>
+<div class="container">
+<div class="main">
+<video id="player" controls autoplay playsinline></video>
+<div class="now" id="now">اختر قناة من القائمة</div>
+</div>
+<div class="sidebar">
+<input class="search" id="search" placeholder="بحث عن قناة...">
+<button class="ch" onclick="playChannel(0)">هــــــــــام جداااا</button>
+<button class="ch" onclick="playChannel(1)">https://t.me/IP4ON قناتنا على التلجرام</button>
+<button class="ch" onclick="playChannel(2)">تحديث ملف متوفر علي موقع ايبي فور اون</button>
+<button class="ch" onclick="playChannel(3)">للتحديث ملف ابحث في جوجل عن ايبي فور اون</button>
+<button class="ch" onclick="playChannel(4)">4K| IP4ON MAX 1SD</button>
+<button class="ch" onclick="playChannel(5)">4K| IP4ON MAX 1HD</button>
+<button class="ch" onclick="playChannel(6)">4K| IP4ON MAX 1 4K</button>
+<button class="ch" onclick="playChannel(7)">4K| IP4ON MAX 1 8K</button>
+<button class="ch" onclick="playChannel(8)">4K| IP4ON MAX 2SD</button>
+<button class="ch" onclick="playChannel(9)">4K| IP4ON MAX 2HD</button>
+<button class="ch" onclick="playChannel(10)">4K| IP4ON MAX 2 4K</button>
+<button class="ch" onclick="playChannel(11)">4K| IP4ON MAX 2 8K</button>
+<button class="ch" onclick="playChannel(12)">4K| IP4ON MAX 3SD</button>
+<button class="ch" onclick="playChannel(13)">4K| IP4ON MAX 3HD</button>
+<button class="ch" onclick="playChannel(14)">4K| IP4ON MAX 3 4K</button>
+<button class="ch" onclick="playChannel(15)">4K| IP4ON MAX 3 8K</button>
+<button class="ch" onclick="playChannel(16)">4K| IP4ON MAX 4SD</button>
+<button class="ch" onclick="playChannel(17)">4K| IP4ON MAX 4HD</button>
+<button class="ch" onclick="playChannel(18)">4K| IP4ON MAX 4 4K</button>
+<button class="ch" onclick="playChannel(19)">4K| IP4ON MAX 4 8K</button>
+<button class="ch" onclick="playChannel(20)">AR| IP4ON MAX 1 SD</button>
+<button class="ch" onclick="playChannel(21)">AR| IP4ON MAX 1 |SD|</button>
+<button class="ch" onclick="playChannel(22)">AR| IP4ON MAX 1 HD</button>
+<button class="ch" onclick="playChannel(23)">AR| IP4ON MAX 1 |HD|</button>
+<button class="ch" onclick="playChannel(24)">AR| IP4ON MAX 1 FHD</button>
+<button class="ch" onclick="playChannel(25)">AR| IP4ON MAX 1 4K</button>
+<button class="ch" onclick="playChannel(26)">AR| IP4ON MAX 1 4K HEVC</button>
+<button class="ch" onclick="playChannel(27)">AR| IP4ON MAX 1 8K</button>
+<button class="ch" onclick="playChannel(28)">AR| IP4ON MAX 2 SD</button>
+<button class="ch" onclick="playChannel(29)">AR| IP4ON MAX 2 |SD|</button>
+<button class="ch" onclick="playChannel(30)">AR| IP4ON MAX 2 HD</button>
+<button class="ch" onclick="playChannel(31)">AR| IP4ON MAX 2 |HD|</button>
+<button class="ch" onclick="playChannel(32)">AR| IP4ON MAX 2 FHD</button>
+<button class="ch" onclick="playChannel(33)">AR| IP4ON MAX 2 4K</button>
+<button class="ch" onclick="playChannel(34)">AR| IP4ON MAX 2 4K HEVC</button>
+<button class="ch" onclick="playChannel(35)">AR| IP4ON MAX 2 8K</button>
+<button class="ch" onclick="playChannel(36)">AR| IP4ON MAX 3 SD</button>
+<button class="ch" onclick="playChannel(37)">AR| IP4ON MAX 3 HD</button>
+<button class="ch" onclick="playChannel(38)">AR| IP4ON MAX 3 FHD</button>
+<button class="ch" onclick="playChannel(39)">AR| IP4ON MAX 3 4K</button>
+<button class="ch" onclick="playChannel(40)">AR| IP4ON MAX 4 SD</button>
+<button class="ch" onclick="playChannel(41)">AR| IP4ON MAX 4 HD</button>
+<button class="ch" onclick="playChannel(42)">AR| IP4ON MAX 4 FHD</button>
+<button class="ch" onclick="playChannel(43)">AR| IP4ON MAX 4 4K</button>
+<button class="ch" onclick="playChannel(44)">AR| IP4ON MAX 5 SD</button>
+<button class="ch" onclick="playChannel(45)">AR| IP4ON MAX 5 HD</button>
+<button class="ch" onclick="playChannel(46)">AR| IP4ON MAX 5 FHD</button>
+<button class="ch" onclick="playChannel(47)">AR| IP4ON MAX 5 4K</button>
+<button class="ch" onclick="playChannel(48)">AR| IP4ON MAX 6 SD</button>
+<button class="ch" onclick="playChannel(49)">AR| IP4ON MAX 6 HD</button>
+<button class="ch" onclick="playChannel(50)">AR| IP4ON MAX 6 FHD</button>
+<button class="ch" onclick="playChannel(51)">AR| IP4ON MAX 6 4K</button>
+<button class="ch" onclick="playChannel(52)">EN| IP4ON MAX 5SD</button>
+<button class="ch" onclick="playChannel(53)">EN| IP4ON MAX 5HD</button>
+<button class="ch" onclick="playChannel(54)">EN| IP4ON MAX 5 4K</button>
+<button class="ch" onclick="playChannel(55)">EN| IP4ON MAX 5 8K</button>
+<button class="ch" onclick="playChannel(56)">FR| IP4ON MAX 6SD</button>
+<button class="ch" onclick="playChannel(57)">FR| IP4ON MAX 6HD</button>
+<button class="ch" onclick="playChannel(58)">FR| IP4ON MAX 6 4K</button>
+<button class="ch" onclick="playChannel(59)">FR| IP4ON MAX 6 8K</button>
+</div>
+</div>
+<script>
+const channels=[
+{name:'هــــــــــام جداااا',url:'https://i.top4top.io/m_3817gh0p61.mp4'},
+{name:'https://t.me/IP4ON قناتنا على التلجرام',url:'https://i.top4top.io/m_3817gh0p61.mp4'},
+{name:'تحديث ملف متوفر علي موقع ايبي فور اون',url:'https://i.top4top.io/m_3817gh0p61.mp4'},
+{name:'للتحديث ملف ابحث في جوجل عن ايبي فور اون',url:'https://i.top4top.io/m_3817gh0p61.mp4'},
+{name:'4K| IP4ON MAX 1SD',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248606'},
+{name:'4K| IP4ON MAX 1HD',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248600'},
+{name:'4K| IP4ON MAX 1 4K',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248612'},
+{name:'4K| IP4ON MAX 1 8K',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248618'},
+{name:'4K| IP4ON MAX 2SD',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248607'},
+{name:'4K| IP4ON MAX 2HD',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248601'},
+{name:'4K| IP4ON MAX 2 4K',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248613'},
+{name:'4K| IP4ON MAX 2 8K',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248619'},
+{name:'4K| IP4ON MAX 3SD',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248608'},
+{name:'4K| IP4ON MAX 3HD',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248602'},
+{name:'4K| IP4ON MAX 3 4K',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248614'},
+{name:'4K| IP4ON MAX 3 8K',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248620'},
+{name:'4K| IP4ON MAX 4SD',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248609'},
+{name:'4K| IP4ON MAX 4HD',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248603'},
+{name:'4K| IP4ON MAX 4 4K',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248615'},
+{name:'4K| IP4ON MAX 4 8K',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248621'},
+{name:'AR| IP4ON MAX 1 SD',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248170'},
+{name:'AR| IP4ON MAX 1 |SD|',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248182'},
+{name:'AR| IP4ON MAX 1 HD',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248164'},
+{name:'AR| IP4ON MAX 1 |HD|',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248180'},
+{name:'AR| IP4ON MAX 1 FHD',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248152'},
+{name:'AR| IP4ON MAX 1 4K',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248158'},
+{name:'AR| IP4ON MAX 1 4K HEVC',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248178'},
+{name:'AR| IP4ON MAX 1 8K',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248176'},
+{name:'AR| IP4ON MAX 2 SD',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248171'},
+{name:'AR| IP4ON MAX 2 |SD|',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248183'},
+{name:'AR| IP4ON MAX 2 HD',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248165'},
+{name:'AR| IP4ON MAX 2 |HD|',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248181'},
+{name:'AR| IP4ON MAX 2 FHD',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248153'},
+{name:'AR| IP4ON MAX 2 4K',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248159'},
+{name:'AR| IP4ON MAX 2 4K HEVC',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248179'},
+{name:'AR| IP4ON MAX 2 8K',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248177'},
+{name:'AR| IP4ON MAX 3 SD',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248172'},
+{name:'AR| IP4ON MAX 3 HD',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248166'},
+{name:'AR| IP4ON MAX 3 FHD',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248154'},
+{name:'AR| IP4ON MAX 3 4K',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248160'},
+{name:'AR| IP4ON MAX 4 SD',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248173'},
+{name:'AR| IP4ON MAX 4 HD',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248167'},
+{name:'AR| IP4ON MAX 4 FHD',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248155'},
+{name:'AR| IP4ON MAX 4 4K',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248161'},
+{name:'AR| IP4ON MAX 5 SD',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248174'},
+{name:'AR| IP4ON MAX 5 HD',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248168'},
+{name:'AR| IP4ON MAX 5 FHD',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248156'},
+{name:'AR| IP4ON MAX 5 4K',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248162'},
+{name:'AR| IP4ON MAX 6 SD',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248175'},
+{name:'AR| IP4ON MAX 6 HD',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248169'},
+{name:'AR| IP4ON MAX 6 FHD',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248157'},
+{name:'AR| IP4ON MAX 6 4K',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248163'},
+{name:'EN| IP4ON MAX 5SD',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248610'},
+{name:'EN| IP4ON MAX 5HD',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248604'},
+{name:'EN| IP4ON MAX 5 4K',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248616'},
+{name:'EN| IP4ON MAX 5 8K',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248622'},
+{name:'FR| IP4ON MAX 6SD',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248611'},
+{name:'FR| IP4ON MAX 6HD',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248605'},
+{name:'FR| IP4ON MAX 6 4K',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248617'},
+{name:'FR| IP4ON MAX 6 8K',url:'http://my.atrupo4k.com:8080/youssef2506/hAXNTNSJWRjE2Bv/248623'}];
+function playChannel(i){
+ const c=channels[i];
+ document.getElementById('player').src=c.url;
+ document.getElementById('player').play();
+ document.getElementById('now').innerText='القناة الحالية: '+c.name;
+}
+document.getElementById('search').addEventListener('input',function(){
+ const q=this.value.toLowerCase();
+ document.querySelectorAll('.ch').forEach(b=>{
+  b.style.display=b.innerText.toLowerCase().includes(q)?'block':'none';
+ });
+});
+if(channels.length) playChannel(0);
+</script>
+</body>
+</html>
